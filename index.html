@@ -1,0 +1,22 @@
+<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rakat — Salah Counter</title><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
+<meta name="theme-color" content="#f7f1e3">
+<style>
+:root{--bg:#f7f1e3;--ink:#1f3a2e;--mute:#6f8570;--sage:#dfe7d6;--forest:#1f4d3a;--gold:#b8954f;--on:#f7f1e3}
+[data-theme=dark]{--bg:#0b100d;--ink:#cdd8ca;--mute:#6d7f6e;--sage:#18211b;--forest:#7fa686;--gold:#a8884a;--on:#0b100d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,'Iowan Old Style',serif;min-height:100dvh}
+#app{max-width:30rem;margin:auto;min-height:100dvh;padding:max(1.5rem,env(safe-area-inset-top)) 1.5rem 2rem;display:flex;flex-direction:column;gap:1.4rem}
+h1{font-weight:400;letter-spacing:.14em;font-size:1.2rem;margin:0}.top{display:flex;justify-content:space-between;align-items:center}
+.sub{color:var(--mute);margin:0}.gold{color:var(--gold)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.opt{display:flex;justify-content:space-between;width:100%;padding:1rem 1.2rem;border-radius:1.1rem;background:var(--sage);margin-bottom:.6rem;border:1px solid transparent}
+.opt[aria-pressed=true]{border-color:var(--gold);background:var(--sage);box-shadow:inset 0 0 0 1px var(--gold)}
+.btn{background:var(--forest);color:var(--on);padding:1rem;border-radius:1.2rem;width:100%;letter-spacing:.08em}.btn:disabled{opacity:.35}
+.ghost{color:var(--mute);padding:.6rem}.small{font-size:.85rem;color:var(--mute)}
+video{width:100%;border-radius:1.2rem;background:#000;transform:scaleX(-1)}video.hid{position:fixed;width:2px;height:2px;opacity:0;pointer-events:none}
+.big{font-size:5rem;line-height:1;margin:.2rem 0}.session{justify-content:center;text-align:center;gap:.8rem}
+.dot{display:inline-block;width:.55rem;height:.55rem;border-radius:50%;background:var(--mute);margin-right:.5rem}.dot.ok{background:var(--forest)}.dot.bad{background:var(--gold)}
+ul{padding-left:1.1rem;margin:.3rem 0}.row{display:flex;justify-content:space-between;padding:.7rem 0;border-bottom:1px solid var(--sage)}
+</style></head><body><div id="app"></div><video id="v" class="hid" playsinline muted></video>
+<script type="module" src="app.js"></script></body></html>
